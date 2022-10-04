@@ -1,0 +1,38 @@
+﻿<Window x:Class="NSmartControler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NSmartControler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" SnapsToDevicePixels="True">
+    <Grid Loaded="Window_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="772*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button_MoveFront" Grid.Column="1" Content="前進" HorizontalAlignment="Left" Margin="28,3,0,0" VerticalAlignment="Top" Height="101" Width="138" FontSize="22" Grid.ColumnSpan="2" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+        <Button x:Name="button_MoveFront_Copy" Grid.Column="1" Content="後進" HorizontalAlignment="Left" Margin="28,453,0,0" VerticalAlignment="Top" Height="101" Width="138" FontSize="22" RenderTransformOrigin="0.435,1.228" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.ColumnSpan="2"/>
+        <Button x:Name="button_MoveFront_Copy1" Grid.Column="1" Content="停止" HorizontalAlignment="Left" Margin="28,219,0,0" VerticalAlignment="Top" Height="101" Width="138" FontSize="22" Grid.ColumnSpan="2" ScrollViewer.VerticalScrollBarVisibility="Disabled" RenderTransformOrigin="0.507,0.223"/>
+        <Slider x:Name="slider_TrainSpeed" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="35" Height="551" Maximum="100" Orientation="Vertical" SmallChange="1" Value="50" Interval="28" TickPlacement="Both" IsSnapToTickEnabled="True" LargeChange="5" ScrollViewer.VerticalScrollBarVisibility="Disabled" ValueChanged="slider_TrainSpeed_ValueChanged" Margin="0,3,0,0">
+            <Slider.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25D60D" Offset="1"/>
+                    <GradientStop Color="#FFE83E3E" Offset="0"/>
+                </LinearGradientBrush>
+            </Slider.Background>
+            <Slider.Effect>
+                <DropShadowEffect/>
+            </Slider.Effect>
+            <Slider.Triggers>
+            </Slider.Triggers>
+
+        </Slider>
+        <Label Grid.Column="3" Content="100%" HorizontalAlignment="Left" Margin="40,-10,0,0" VerticalAlignment="Top" Height="39" Width="59" FontSize="20" FontWeight="Bold"/>
+        <Label Grid.Column="3" Content="0%" HorizontalAlignment="Left" Margin="40,527,0,0" VerticalAlignment="Top" Height="39" Width="59" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_SelectedSpeed" Grid.Column="2" HorizontalAlignment="Left" Margin="69,554,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Grid.ColumnSpan="2" Height="30" TextAlignment="Center" Width="90" Foreground="#FFEA1616"><Run Language="ja-jp" Text="50%"/></TextBlock>
+
+    </Grid>
+</Window>
